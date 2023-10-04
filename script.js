@@ -10,7 +10,7 @@ fetch(url)
         ipAddress += data.ip;
         document.getElementById("ip-address").append(`${data.ip}`)
         console.log(ipAddress);
-    })
+    }).catch(error => console.log(error))
 /*-------------------Updating the Latitude,Longitude and other Details for the IP Address received---------------------------------------------------------------------------*/
 fetch('https://ipinfo.io/'+ipAddress+token)
                     .then(res => res.json())
@@ -22,13 +22,13 @@ fetch('https://ipinfo.io/'+ipAddress+token)
                         document.getElementById("reg").innerHTML += `   ${data.region}`;
                         document.getElementById("host").innerHTML += `  ${data.hostname}`;
                         return data;
-                    })
+                    }).catch(error => console.log(error))
 /*--------------------Updating the Google Map for USERS Location--------------------------------------------------------------------------------------------------*/
                     .then(data => {
                         document.getElementById("maps").src = "https://maps.google.com/maps?q="+`${data.loc.split(",").shift()}`+","+`${data.loc.split(",").pop()}`+"&z=15&output=embed"
                         console.log("https://maps.google.com/maps?q="+`${data.loc.split(",").shift()}`+","+`${data.loc.split(",").pop()}`+"&z=15&output=embed");
                         return data;
-                         })
+                         }).catch(error => console.log(error))
 /*--------------------Updating the Timezone,Date and Time, Pincode for provided IP Address---------------------------------------------------------------------------------------*/
                     .then(data =>{
                         let kolkata_datetime_str = new Date().toLocaleString("en-US", { timeZone: `${data.timezone}`});
@@ -37,12 +37,12 @@ fetch('https://ipinfo.io/'+ipAddress+token)
                         document.getElementById("dateTime").innerHTML += `   ${date_kolkata}`;
                         document.getElementById("pin").innerHTML += `   ${data.postal}`;
                         return data;
-                    })
+                    }).catch(error => console.log(error))
                     .then(data =>{
                         let postal = `${data.postal}`
                         code = postal;
                         console.log(code);
-                    })
+                    }).catch(error => console.log(error))
 /*--------------------Updating the Number of post offices available---------------------------------------------------------------------------------------*/
                     .then(data => fetch('https://api.postalpincode.in/pincode/'+code))
                                         .then(res => res.json())
@@ -51,7 +51,7 @@ fetch('https://ipinfo.io/'+ipAddress+token)
                                             console.log(data[0].Message);
                                             console.log(data[0].PostOffice.length);
                                             return data;
-                                        })
+                                        }).catch(error => console.log(error))
 /*--------------------getting the post offices around the IP and updating the available post offices---------------------------------------------------------------------------------------*/
                                         .then(data =>{
                                             const postOffices = data[0].PostOffice;
@@ -69,7 +69,7 @@ fetch('https://ipinfo.io/'+ipAddress+token)
                                                 `;
                                                 list[0].appendChild(item);
                                             });
-                                        });
+                                        }).catch(error => console.log(error));
 
 /*--------------------Handling Search operating and filtering the Cards---------------------------------------------------------------------------------------*/
 searchBar.addEventListener('input',(e)=>{
