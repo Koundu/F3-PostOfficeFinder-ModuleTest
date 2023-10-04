@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Details</title>
+</head>
+<body>
+    <div id="container" >
+        <h1 id="ip">IP ADDRESS:</h1>
+        <div id="ip-address"></div>
+    </div>
+    <div id="data">
+        <p id="lat">Lat:</p>
+        <p id="city">City:</p>
+        <p id="org">Organization:</p>
+        <p id="log">Long:</p>
+        <p id="reg">Region:</p>
+        <p id="host">Hostname:</p>
+    </div>
+    <div class="maps">
+        <h1>Your Current Location</h1>
+        <iframe id="maps" src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed" style="width: 80%;height: 80%;" frameborder="0" style="border:0"></iframe>
+    </div>
+    <div class="postalInfo">
+        <h1>More Information About You</h1>
+        <div id="details">
+            <p id="timeZone">Time Zone:</p>
+            <p id="dateTime">Date and Time:</p>
+            <p id="pin">Pincode:</p>
+            <p id="msg">Message: </p>
+        </div>
+    </div>
+    <div class="postOffices">
+        <h1>Post Offices Near You</h1>
+        <br/>
+        <input type="text" placeholder="Search By Name">
+        <br/>
+        <div class="cardItems">
+            <!-- <div id="card" >
+                <p id="name">Name:</p>
+                <p id="bt">Branch Type:</p>
+                <p id="ds">Delivery Status:</p>
+                <p id="dst">District:</p>
+                <p id="div">Division:</p>
+            </div> -->
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

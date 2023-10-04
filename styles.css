@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*{
+    margin: 0px;
+    width: auto;
+    height: auto;
+    font-family: 'Inter',sans-serif;
+    justify-content: baseline;
+    background-color: black;
+    color: #575A85;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.right{
+    background-color: #575A85;
+    width: 776px;
+    height: 982px;
+}
+
+.main .left img{
+    width: 482px;
+    height: 462px;
+    margin-top: 136px;
+    margin-left: 125px;
+}
+.main .left h2{
+    width: 445px;
+    height: 44px;
+    margin-top: 33px;
+    margin-left: 41px;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main .left p{
+    color: #B8BCCC;
+    width: 651px;
+    height: 58px;
+    margin-top: 29px;
+    margin-left: 41px;
+    font-weight: 400;
+    font-size: 24px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right #container h1{
+    font-size: 36px;
+    color: #B8BCCC;
+    font-weight: 400;
+    background-color: inherit;
+    padding-inline-start: 10px;
+    margin-block: 15px;
+}
+.right #container #ip-address{
+    font-size: 36px;
+    font-family: 'Dancing Script', cursive;
+    background-color: inherit;
+    color: white;
+    padding-inline-end: 10px;
+    margin: 10px;
+    font-weight: 700;
+}
+button{
+    width: 345px;
+    height: 67px;
+    background-color: inherit;
+    border-color: white;
+    border: 2px solid inherit;
+    border-radius: 10px;
+    margin-left: 41px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #B8BCCC;
+    font-size: 24px;
+    background-color: inherit;
+}
+
+#data{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#data > p{
+    margin-left: 40px;
+    text-align: start;
+    font-style: bold;
+    font-weight:bolder;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: #B8BCCC;
+    opacity: 0.5;
+}
+
+
+input{
+    width: 1408px;
+    height: 85px;
+    border-radius: 10px;
+    border: 3px solid #575A85;
+    margin-inline: 100px;
+    font-size: 32px;
+    color: #B8BCCC;
+}
+
+.cardItems{
+    display: flex;
+    width: max-content;
+    height: max-content;
+    margin: 0px;
+    margin-inline: 70px !important;
+    padding: 0px;
+}
+
+#card{
+    width: 670px;
+    height: 400px;
+    border-radius: 10px;
+    margin-block: 20px;
+    margin-inline:10px;
+    background-color: #575A85;
+    padding: 15px;
+}
+
+
+
+
+#card > p{
+    font-weight: 700;
+    background-color: inherit;
+    color: #B8BCCC;
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+
+#details{
+    margin-left: 41px;
+    font-size: 41px;
+    width: 1167px;
+    margin-bottom: 20px;
+}
+
+
+#details > p{
+    padding-inline: 10px;
+    align-items: end;
+    color: #B8BCCC;
+    opacity: 0.5;
+}
+
+.after-container{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+
+}
+
+#container #ip{
+    color: #B8BCCC;
+    opacity: 0.5;
+}
+
+#afterClicking{
+    align-items: center;
+}
+
+.postalInfo h1{
+    color: #B8BCCC;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.postOffices h1{
+    color: #B8BCCC;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 48px;
+    width:inherit 100%;
+}
+
+.maps{
+    width: 100%;
+    height: 946px;
+    background-color: #575A85;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.maps iframe{
+    width: 1390px;
+    height: 677px;
+    padding-top: 27px;
+    background-color: inherit;
+}
+
+.maps h1{
+    background-color: inherit;
+    color: #B8BCCC;
+}
+
+#container{
+    display: flex;
+    background-color: inherit;
+    margin: 20px;
+}
+
+#container #ip-address{
+    font-size: 36px;
+    font-family: 'Dancing Script', cursive;
+    background-color: inherit;
+    color: white;
+    padding-inline-end: 10px;
+    font-weight: 700;
+}
+
+.postalInfo{
+  padding: 10px;
+}
+
+.postalInfo h1{
+    margin-block: 80px;
+}
+
+.postalInfo #details p{
+    margin-left: 53px;
+    font-size: 34px;
+    margin-block: 40px;
+    font-weight: 700;
+}
+
+.postOffices h1{
+    margin-block: 80px;
+}
+
+.cardItems{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+}
+
